@@ -1,10 +1,37 @@
+* {
+    font-family: "Sonsie One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+    height: 150px;
+    width: 100%;
+    background-color: blueviolet;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    height: 50px;
+    width: 120px;
+    padding: 2px;
+    border-radius: 20px;
+    border: none;
+    margin: 2px;
+    cursor: pointer;
+}
+
 body {
     height: 100%;
     width: 99%;
-    margin: 5px;
+    margin: 10px;
 }
 
 .container {
     display: flex;
     justify-content: center;
+    margin: 10px;
 }
