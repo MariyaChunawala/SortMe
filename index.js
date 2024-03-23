@@ -30,10 +30,7 @@ function renderArray(arr) {
     for (var i = 0; i < arr.length; i++) {
         var bar = document.createElement('div');
         bar.classList.add('bar');
-        bar.style.height = (arr[i] * 0.25) + 'px';
-        bar.style.width = '20px';
-        bar.style.backgroundColor = 'black';
-        bar.style.margin = '1px';
+        bar.innerText = arr[i];
         bar.setAttribute('id', i);
         container.appendChild(bar);
     }

@@ -10,7 +10,7 @@ nav {
     background-color: blueviolet;
     border-radius: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -33,5 +33,18 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    margin: 10px;
+    flex-wrap: wrap;
+    margin: 25px 100px;
+}
+
+.bar {
+    height: 60px;
+    width: 60px;
+    background: linear-gradient(216deg, #5DACD4, #A7DBF3, #83B0DE, #4C75BA);
+    border-radius: 50%;
+    color: white;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

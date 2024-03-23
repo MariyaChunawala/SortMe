@@ -13,16 +13,15 @@
 </head>
 
 <nav>
-    <div class="range">
-        <label for="sizeInput">
-            Size
-        </label>
-        <input type="range" min="1" max="100" value="23" id="sizeInput">
-        <label for="speedInput">
-            Speed
-        </label>
-        <input type="range" min="100" max="1000" value="100" id="speedInput">
-    </div>
+    <button onclick="createArrayAndSort()" class="button">Generate New Array</button>
+    <label for="sizeInput">
+        Size
+    </label>
+    <input type="range" min="1" max="70" value="23" id="sizeInput">
+    <label for="speedInput">
+        Speed
+    </label>
+    <input type="range" min="100" max="1000" value="100" id="speedInput">
     <button onclick="bubbleSort()" class="button"> Bubble Sort </button>
     <button onclick="bubbleSort()" class="button"> Insertion Sort </button>
     <button onclick="bubbleSort()" class="button"> Selection Sort </button>
