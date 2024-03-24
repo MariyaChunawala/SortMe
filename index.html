@@ -13,28 +13,44 @@
 </head>
 
 <nav>
-    <button onclick="createArrayAndSort()" class="button">Generate New Array</button>
-    <label for="sizeInput">
-        Size
-    </label>
-    <input type="range" min="1" max="70" value="23" id="sizeInput">
-    <label for="speedInput">
-        Speed
-    </label>
-    <input type="range" min="100" max="1000" value="100" id="speedInput">
-    <button onclick="bubbleSort()" class="button"> Bubble Sort </button>
-    <button onclick="bubbleSort()" class="button"> Insertion Sort </button>
-    <button onclick="bubbleSort()" class="button"> Selection Sort </button>
-    <button onclick="bubbleSort()" class="button"> Merge Sort </button>
-    <button onclick="bubbleSort()" class="button"> Quick Sort </button>
-
-
+    <div>
+        <button onclick="createArrayAndSort()" class="button">Generate New Array</button>
+    </div>
+    <div>
+        <label for="sizeInput">
+            Size
+        </label>
+        <input type="range" min="1" max="70" value="23" id="sizeInput">
+    </div>
+    <div>
+        <label for="speedInput">
+            Speed
+        </label>
+        <input type="range" min="500" max="3000" value="1000" id="speedInput">
+    </div>
+    <div>
+        <button onclick="bubbleSort()" class="button"> Bubble Sort </button>
+    </div>
+    <div>
+        <button onclick="insertionSort()" class="button"> Insertion Sort </button>
+    </div>
+    <div>
+        <button onclick="bubbleSort()" class="button"> Selection Sort </button>
+    </div>
+    <div>
+        <button onclick="bubbleSort()" class="button"> Merge Sort </button>
+    </div>
+    <div>
+        <button onclick="bubbleSort()" class="button"> Quick Sort </button>
+    </div>
 </nav>
 
 <body>
     <div class="container"></div>
     <script src="index.js"></script>
+    <script src="Utils/sleep.js"></script>
     <script src="SortingAlgorithm/bubbleSort.js"></script>
+    <script src="SortingAlgorithm/insertionSort.js"></script>
 </body>
 
 </html>

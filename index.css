@@ -2,6 +2,7 @@
     font-family: "Sonsie One", system-ui;
     font-weight: 400;
     font-style: normal;
+    /* font-size: 10px; */
 }
 
 nav {
@@ -22,6 +23,14 @@ nav {
     border: none;
     margin: 2px;
     cursor: pointer;
+    background-color: white;
+    color: #000;
+}
+
+.button:hover {
+    height: 60px;
+    width: 130px;
+    transition: height 0.5s, width 0.5s;
 }
 
 body {

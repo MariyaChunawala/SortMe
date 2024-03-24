@@ -1,12 +1,21 @@
-var speedElement = document.getElementById('speedInput');
-var speed = speedElement.value;
-
-speedElement.addEventListener('input', updateSpeed);
-
 async function bubbleSort() {
+    // Disable the button
+    var buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => {
+        button.disabled = true;
+        button.style.background = '#d3d3d3';
+    });
+
+    // Call the sorting function
+    await BubbleSort(); // Assuming bubbleSort is an asynchronous function
+
+    // Enable the button after sorting is complete
+    buttons.forEach(button => button.disabled = false);
+}
+
+async function BubbleSort() {
     var i, j, temp;
     for (i = 0; i < arr.length - 1; i++) {
-        swapped = false;
         for (j = 0; j < arr.length - i - 1; j++) {
             if (arr[j] > arr[j + 1]) {
 
@@ -14,7 +23,6 @@ async function bubbleSort() {
                 temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
-                swapped = true;
 
                 var bar1 = document.getElementById(j);
                 var bar2 = document.getElementById(j + 1);
@@ -31,7 +39,7 @@ async function bubbleSort() {
                 bar1.innerText = text2;
                 bar2.innerText = text1;
 
-                await sleep(speed);
+                await sleep();
 
                 bar1.style.height = '60px';
                 bar1.style.width = '60px';
@@ -46,11 +54,4 @@ async function bubbleSort() {
     }
     var bar = document.getElementById(0);
     bar.style.background = `linear-gradient(216deg, #0E2A4D, #39648D, #83B0DE, #4C75BA)`;
-}
-function sleep(ms) {
-    console.log(ms);
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-function updateSpeed() {
-    speed = speedElement.value;
 }
