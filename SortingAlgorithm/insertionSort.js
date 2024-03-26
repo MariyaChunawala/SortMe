@@ -1,4 +1,12 @@
 async function insertionSort() {
+    isDisable(true);
+
+    await InsertionSort();
+
+    isDisable(false);
+}
+
+async function InsertionSort() {
     for (var i = 1; i < arr.length; i++) {
         var key = arr[i];
         var j = i - 1;
@@ -12,8 +20,8 @@ async function insertionSort() {
             bar1.style.width = '65px';
             bar2.style.height = '65px';
             bar2.style.width = '65px';
-            bar1.style.background = 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,54,1) 35%, rgba(0,212,255,1) 100%)';
-            bar2.style.background = 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,54,1) 35%, rgba(0,212,255,1) 100%)';
+            bar1.style.background = 'linear-gradient(216deg, #0E2A4D, #39648D, #83B0DE, #4C75BA)';
+            bar2.style.background = 'linear-gradient(216deg, #0E2A4D, #39648D, #83B0DE, #4C75BA)';
             bar2.innerText = bar1.innerText;
             j--;
 
@@ -22,5 +30,7 @@ async function insertionSort() {
         arr[j + 1] = key;
         var bar = document.getElementById(j + 1);
         bar.innerText = key;
+
+
     }
 }

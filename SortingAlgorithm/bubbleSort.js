@@ -1,16 +1,9 @@
 async function bubbleSort() {
-    // Disable the button
-    var buttons = document.querySelectorAll('.button');
-    buttons.forEach(button => {
-        button.disabled = true;
-        button.style.background = '#d3d3d3';
-    });
+    isDisable(true);
 
-    // Call the sorting function
-    await BubbleSort(); // Assuming bubbleSort is an asynchronous function
+    await BubbleSort();
 
-    // Enable the button after sorting is complete
-    buttons.forEach(button => button.disabled = false);
+    isDisable(false);
 }
 
 async function BubbleSort() {
@@ -54,4 +47,8 @@ async function BubbleSort() {
     }
     var bar = document.getElementById(0);
     bar.style.background = `linear-gradient(216deg, #0E2A4D, #39648D, #83B0DE, #4C75BA)`;
+
+    showToast("Bubble Sort is completed.")
+
+    return;
 }
