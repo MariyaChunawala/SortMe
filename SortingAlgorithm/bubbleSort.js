@@ -1,3 +1,7 @@
+var sorted_color = 'linear-gradient(216deg, #0E2A4D, #39648D, #83B0DE, #4C75BA)'; // dark blue
+var cmpr_color = 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,54,1) 35%, rgba(0,212,255,1) 100%)'; //green blue
+var initial_color = 'linear-gradient(216deg, #5DACD4, #A7DBF3, #83B0DE, #4C75BA)'; // light blue
+
 async function bubbleSort() {
     isDisable(true);
 
@@ -25,8 +29,8 @@ async function BubbleSort() {
                 bar1.style.width = '65px';
                 bar2.style.height = '65px';
                 bar2.style.width = '65px';
-                bar1.style.background = 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,54,1) 35%, rgba(0,212,255,1) 100%)';
-                bar2.style.background = 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,54,1) 35%, rgba(0,212,255,1) 100%)';
+                bar1.style.background = cmpr_color;
+                bar2.style.background = cmpr_color;
                 var text1 = bar1.innerText;
                 var text2 = bar2.innerText;
                 bar1.innerText = text2;
@@ -38,15 +42,15 @@ async function BubbleSort() {
                 bar1.style.width = '60px';
                 bar2.style.height = '60px';
                 bar2.style.width = '60px';
-                bar1.style.background = `linear-gradient(216deg, #5DACD4, #A7DBF3, #83B0DE, #4C75BA)`;
-                bar2.style.background = `linear-gradient(216deg, #5DACD4, #A7DBF3, #83B0DE, #4C75BA)`;
+                bar1.style.background = initial_color;
+                bar2.style.background = initial_color;
             }
         }
         var bar = document.getElementById(arr.length - 1 - i);
-        bar.style.background = `linear-gradient(216deg, #0E2A4D, #39648D, #83B0DE, #4C75BA)`;
+        bar.style.background = sorted_color;
     }
     var bar = document.getElementById(0);
-    bar.style.background = `linear-gradient(216deg, #0E2A4D, #39648D, #83B0DE, #4C75BA)`;
+    bar.style.background = sorted_color;
 
     showToast("Bubble Sort is completed.")
 
