@@ -14,6 +14,10 @@ async function BubbleSort() {
     var i, j, temp;
     for (i = 0; i < arr.length - 1; i++) {
         for (j = 0; j < arr.length - i - 1; j++) {
+            var bar1 = document.getElementById(j);
+            var bar2 = document.getElementById(j + 1);
+            bar1.style.background = cmpr_color;
+            bar2.style.background = cmpr_color;
             if (arr[j] > arr[j + 1]) {
 
                 // Swap arr[j] and arr[j+1]
@@ -21,30 +25,21 @@ async function BubbleSort() {
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
 
-                var bar1 = document.getElementById(j);
-                var bar2 = document.getElementById(j + 1);
-                bar1.style.transition = "height 0.5s, width 0.5s, background-color 0.5s";
-                bar2.style.transition = "height 0.5s, width 0.5s, background-color 0.5s";
-                bar1.style.height = '65px';
-                bar1.style.width = '65px';
-                bar2.style.height = '65px';
-                bar2.style.width = '65px';
-                bar1.style.background = cmpr_color;
-                bar2.style.background = cmpr_color;
-                var text1 = bar1.innerText;
-                var text2 = bar2.innerText;
-                bar1.innerText = text2;
-                bar2.innerText = text1;
-
                 await sleep();
 
-                bar1.style.height = '60px';
-                bar1.style.width = '60px';
-                bar2.style.height = '60px';
-                bar2.style.width = '60px';
-                bar1.style.background = initial_color;
-                bar2.style.background = initial_color;
+                var bar1 = document.getElementById(j);
+                var bar2 = document.getElementById(j + 1);
+
+                var height1 = bar1.style.height;
+                var height2 = bar2.style.height;
+
+                bar1.style.height = height2;
+                bar2.style.height = height1;
+
             }
+            await sleep();
+            bar1.style.background = initial_color;
+            bar2.style.background = initial_color;
         }
         var bar = document.getElementById(arr.length - 1 - i);
         bar.style.background = sorted_color;

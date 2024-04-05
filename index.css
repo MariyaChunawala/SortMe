@@ -42,18 +42,23 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: 25px 100px;
+    height: 100%;
+    /* background-color: #000; */
 }
 
 .bar {
-    height: 60px;
-    width: 60px;
     background: linear-gradient(216deg, #5DACD4, #A7DBF3, #83B0DE, #4C75BA);
-    border-radius: 50%;
+    width: 20px;
     color: white;
-    margin: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 2px;
+}
+
+.traverse {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 54, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.sorted {
+    background: linear-gradient(216deg, #0E2A4D, #39648D, #83B0DE, #4C75BA);
 }

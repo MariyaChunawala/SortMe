@@ -21,7 +21,7 @@ function createArrayAndSort() {
 
 function createArray() {
     // Create a random array based on the input size
-    var newArr = randomArray(size.value, 1, 1000);
+    var newArr = randomArray(size.value, 10, 1000);
     return newArr;
 }
 
@@ -30,7 +30,7 @@ function renderArray(arr) {
     for (var i = 0; i < arr.length; i++) {
         var bar = document.createElement('div');
         bar.classList.add('bar');
-        bar.innerText = arr[i];
+        bar.style.height = (arr[i] * 0.5) + 'px';
         bar.setAttribute('id', i);
         container.appendChild(bar);
     }

@@ -7,5 +7,5 @@ function sleep() {
     return new Promise(resolve => setTimeout(resolve, speed));
 }
 function updateSpeed() {
-    speed = 3500 - speedElement.value;
+    speed = 1100 - speedElement.value;
 }
