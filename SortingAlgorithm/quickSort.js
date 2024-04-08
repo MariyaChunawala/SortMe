@@ -8,9 +8,10 @@ async function quickSort() {
 
 async function QuickSort() {
 
-    await Q_Sort(arr, 0, arr.length - 1)
+    await Q_Sort(arr, 0, arr.length - 1);
+    await sortColor(0, arr.length);
 
-    showToast("Quick Sort is completed.")
+    showToast("Quick Sort is completed.");
 }
 
 async function Q_Sort(arr, low, high) {

@@ -4,6 +4,7 @@ function showToast(message) {
     toast.textContent = message;
 
     toast.style.textAlign = 'center';
+    toast.style.color = '#000'
 
     document.body.appendChild(toast);
 

@@ -38,7 +38,7 @@ function renderArray(arr) {
     for (var i = 0; i < arr.length; i++) {
         var bar = document.createElement('div');
         bar.classList.add('bar');
-        bar.style.height = (arr[i] * 0.5) + 'px';
+        bar.style.height = (arr[i] * 0.4) + 'px';
         bar.setAttribute('id', i);
         container.appendChild(bar);
     }
