@@ -21,12 +21,14 @@
             Size
         </label>
         <input type="range" min="2" max="70" value="23" id="sizeInput">
+        <span id="size"></span>
     </div>
     <div>
         <label for="speedInput">
             Speed
         </label>
-        <input type="range" min="100" max="1000" value="200" id="speedInput">
+        <input type="range" min="10" max="1000" value="200" id="speedInput">
+        <span id="speed"></span>
     </div>
     <div>
         <button onclick="bubbleSort()" class="button"> Bubble Sort </button>
@@ -41,7 +43,7 @@
         <button onclick="mergeSort()" class="button"> Merge Sort </button>
     </div>
     <div>
-        <button onclick="bubbleSort()" class="button"> Quick Sort </button>
+        <button onclick="quickSort()" class="button"> Quick Sort </button>
     </div>
 </nav>
 
@@ -51,10 +53,12 @@
     <script src="Utils/sleep.js"></script>
     <script src="Utils/buttonDisable.js"></script>
     <script src="Utils/toast.js"></script>
+    <script src="Utils/swap.js"></script>
     <script src="SortingAlgorithm/bubbleSort.js"></script>
     <script src="SortingAlgorithm/insertionSort.js"></script>
     <script src="SortingAlgorithm/selectionSort.js"></script>
     <script src="SortingAlgorithm/mergeSort.js"></script>
+    <script src="SortingAlgorithm/quickSort.js"></script>
 </body>
 
 </html>

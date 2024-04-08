@@ -1,3 +1,7 @@
+var sorted_color = 'linear-gradient(216deg, #0E2A4D, #39648D, #83B0DE, #4C75BA)'; // dark blue
+var cmpr_color = 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,54,1) 35%, rgba(0,212,255,1) 100%)'; //green blue
+var initial_color = 'linear-gradient(216deg, #5DACD4, #A7DBF3, #83B0DE, #4C75BA)'; // light blue
+
 var container = document.getElementsByClassName('container')[0];
 var size = document.getElementById("sizeInput");
 var arr = [];
@@ -14,6 +18,10 @@ function createArrayAndSort() {
 
     // Create a new array
     arr = createArray();
+
+    // Add Size of array at textarea
+    var arr_size = document.getElementById('size');
+    arr_size.innerText = size.value;
 
     // Render the array
     renderArray(arr);

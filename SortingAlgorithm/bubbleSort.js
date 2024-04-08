@@ -1,7 +1,3 @@
-var sorted_color = 'linear-gradient(216deg, #0E2A4D, #39648D, #83B0DE, #4C75BA)'; // dark blue
-var cmpr_color = 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,54,1) 35%, rgba(0,212,255,1) 100%)'; //green blue
-var initial_color = 'linear-gradient(216deg, #5DACD4, #A7DBF3, #83B0DE, #4C75BA)'; // light blue
-
 async function bubbleSort() {
     isDisable(true);
 
@@ -21,20 +17,11 @@ async function BubbleSort() {
             if (arr[j] > arr[j + 1]) {
 
                 // Swap arr[j] and arr[j+1]
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+                swap(arr, j, j + 1);
 
                 await sleep();
 
-                var bar1 = document.getElementById(j);
-                var bar2 = document.getElementById(j + 1);
-
-                var height1 = bar1.style.height;
-                var height2 = bar2.style.height;
-
-                bar1.style.height = height2;
-                bar2.style.height = height1;
+                swapHeight(j, j + 1);
 
             }
             await sleep();
